@@ -219,7 +219,7 @@ footer{
     height: 10%;
 }
 
-.form_connexion > a:hover {
+.form_connexion > a:hover, .back_btn:hover {
     text-decoration: underline;
     text-shadow: #fff 1px 0  10px;
     font-weight: 700;
