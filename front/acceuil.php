@@ -1,4 +1,5 @@
 <?php
+include_once '../back/session.php';
 $page = 'Acceuil';
 include_once 'header.php';
 ?>

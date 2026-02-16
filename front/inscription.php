@@ -1,3 +1,26 @@
+<?php
+require_once '../back/db_connect.php';
+require_once '../back/functions.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['newa_email'];
+    $password = $_POST['newa_password'];
+    $password_check = $_POST['newa_password_check'];
+
+    if ($password === $password_check) {
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+        try {
+            createUser($email, $password_hash);
+        } catch (PDOException $e) {
+            echo 'Un compte existe déjà sur cette adresse mail';
+        }
+    } else {
+        echo 'Le mot de passe doit correspondre';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +32,11 @@
 </head>
 
 <body id="inscription">
+
     <main class="main_inscription">
 
         <h2>Créez votre compte</h2>
-        <form action="" id="form_newa">
+        <form method="POST" id="form_newa">
             <br>
             <label for="newa_email">Entrez votre adresse email</label>
             <input type="email" name="newa_email" id="newa_email" required>

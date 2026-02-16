@@ -26,24 +26,3 @@ navLink.forEach((nav_e) => {
   nav_e.addEventListener("mouseenter", color);
   nav_e.addEventListener("mouseleave", colorEnd);
 });
-
-// form submit ----------->
-
-function resetForm() {
-  password.value = "";
-  email.value = "";
-}
-
-function submitForm() {
-  input_password = password.value;
-  input_email = email.value;
-  if (input_email != "" && input_password != "") {
-    resetForm();
-    user_data.push(input_email, input_password);
-    return user_data;
-  }
-}
-
-// connexion_btn.addEventListener("click", submitForm);
-
-// console.log(user_data);

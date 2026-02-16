@@ -15,12 +15,25 @@
                     <p class="home_arrow">▶</p>
                 </div>
             </a>
-            <a href="./connexion.php">
-                <div class="nav_link">
-                    <p class="connexion_btn">Connexion </p>
-                    <p class="home_arrow">▶</p>
-                </div>
-            </a>
+            <?php if (isLoggedIn()): ?>
+                <a href="logout.php">
+                    <div class="nav_link">
+                        <p class="connexion_btn">
+                            Déconnexion
+                        </p>
+                        <p class="home_arrow">▶</p>
+                    </div>
+                </a>
+            <?php else: ?>
+                <a href="connexion.php">
+                    <div class="nav_link">
+                        <p class="connexion_btn">
+                            Connexion
+                        </p>
+                        <p class="home_arrow">▶</p>
+                    </div>
+                </a>
+            <?php endif; ?>
             <a href="./contact.php">
                 <div class="nav_link">
                     <p class="contact_btn">Contact </p>
