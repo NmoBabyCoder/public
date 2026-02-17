@@ -5,7 +5,6 @@ const password = document.getElementById("password");
 const email = document.getElementById("email");
 const connexion_btn = document.querySelector(".connexion_btn");
 const connexion_background = document.querySelector(".main_connexion");
-let user_data = [];
 
 navLink.forEach((nav_e) => {
   function color() {

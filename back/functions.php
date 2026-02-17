@@ -35,3 +35,38 @@ function getUserByEmail($email)
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
 }
+
+function getAllMenus()
+{
+
+    $pdo = getDBConnexion();
+
+    $sql = 'SELECT * FROM menus;';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    $result = $stmt->fetchAll();
+
+    $menus = [];
+
+    foreach ($result as $row) {
+        if (isset($menus[$row['idmenu']]) == false) {
+
+            $menu = [
+                'title' => $row['title'],
+                'description' => $row['description'],
+                'image' => $row['image'],
+                'price' => $row['price']
+            ];
+
+            $menus[$row['idmenu']] = $menu;
+        }
+    }
+
+    return $menus;
+}
+
+function showMenuInfo($data, $name)
+{
+    echo htmlspecialchars($data[$name], ENT_QUOTES, 'UTF-8') . "\t";
+}
