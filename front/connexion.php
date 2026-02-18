@@ -44,7 +44,7 @@ require_once '../back/functions.php';
             <a href="./inscription.php">Pas de compte ?</a>
         </form>
     </main>
-    <footer></footer>
+    <?php include_once 'footer.php'; ?>
     <script src="./script.js"></script>
 </body>
 

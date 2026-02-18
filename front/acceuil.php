@@ -28,7 +28,7 @@ include_once 'header.php';
             <img class="main_img" src="../img/plat_page acceuil_cut.jpg" alt="image d'un plat de beauf avec du riz et des oignons">
         </div>
     </main>
-    <footer></footer>
+    <?php include_once 'footer.php'; ?>
     <script src="./script.js"></script>
 </body>
 

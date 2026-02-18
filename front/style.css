@@ -4,7 +4,6 @@
 }
 
 *{
-    /* width: 99%; */
     margin: 0;
     padding: 0;
     font-family: Abel;
@@ -80,16 +79,40 @@ a{
     border-radius: 10px;
     padding-top: 4%;
 }
+main{
+    width: 100%;
+    min-height: 55%;
+}
 
 footer{
     width: 100%;
+    margin-bottom: 10px;
+}
+
+footer > hr{
+    width: 90%;
+    margin: 10px;
+    justify-self: center;
+}
+.footer{
     min-height: 10%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+}
+
+.restaurant_info, .hour_info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 3%;
 }
 /* acceuil page */
-.main_acceuil{
+/* .main_acceuil{
     width: 100%;
-    min-height: 70%;
-}
+    min-height: 55%;
+} */
 
 #presentation{
     margin: 20px;
@@ -143,7 +166,7 @@ footer{
 
 .form_connexion > input{
     margin: 10px;
-    height: 10%;
+    height: 8%;
     width: 20%;
 }
 
@@ -271,9 +294,9 @@ footer{
 
 .form_connexion > .connexion_btn:hover{
     background: #765233;
-    margin: 15px;
+    margin: 16px;
     width: 11%;
-    height: 10%;
+    height: 6%;
 }
 
 .form_connexion > a:hover, .back_btn:hover {
@@ -287,6 +310,10 @@ footer{
     border: 2px solid #765233;
     background-color: rgb(254, 234, 210);
     color: #765233;
+}
+
+.restaurant_info > a:hover{
+    color: #61442c;
 }
 
 /* responsive part */
@@ -311,7 +338,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
     header{
         display: flex;
         flex-direction: column;

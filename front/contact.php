@@ -19,6 +19,10 @@ include_once '../back/session.php';
     include_once 'header.php';
     ?>
 
+
+
+
+    <?php include_once 'footer.php'; ?>
     <script src="./script.js"></script>
 </body>
 

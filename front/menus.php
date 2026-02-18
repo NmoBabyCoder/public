@@ -35,6 +35,9 @@ require_once '../back/functions.php';
         <?php endforeach; ?>
     </main>
 
+
+
+    <?php include_once 'footer.php'; ?>
     <script src="./script.js"></script>
 </body>
 
