@@ -1,6 +1,6 @@
 <?php
 include_once '../back/session.php';
-$page = 'Acceuil';
+$page = 'Accueil';
 include_once 'header.php';
 ?>
 

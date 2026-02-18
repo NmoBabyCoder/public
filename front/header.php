@@ -3,9 +3,9 @@
         <h2 class="home_title"><?php echo $page ?></h2>
         <hr width="60%">
         <ul>
-            <a href="./acceuil.php">
+            <a href="./index.php">
                 <div class="nav_link">
-                    <p class="acceuil_btn">Acceuil </p>
+                    <p class="acceuil_btn">Accueil </p>
                     <p class="home_arrow">▶</p>
                 </div>
             </a>

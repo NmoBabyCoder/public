@@ -29,7 +29,7 @@ require_once '../back/functions.php';
                 $user = getUserByEmail($email);
                 if ($user and password_verify($password, $user['password'])) {
                     $_SESSION['id'] = $user['id'];
-                    header('Location: acceuil.php');
+                    header('Location: index.php');
                 } else {
                     $msg = 'Identifiant ou mot de passe incorect';
                 }
